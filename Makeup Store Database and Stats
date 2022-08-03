@@ -1,0 +1,28 @@
+--Create a grocery store database
+
+CREATE TABLE makeup (id INTEGER PRIMARY KEY, brand TEXT, item TEXT, price INTEGER, isle INTEGER); 
+
+INSERT INTO makeup VALUES
+(1, "L'Oreal", "Mascara", 9.99, 12),
+(2, "Wet n Wild", "Brow Pencil", 2.99, 8),
+(3, "Neutrogena", "Powder", 14.99, 2),
+(4, "E.L.F", "Primer", 8.99, 4), 
+(5, "NYX", "Lip Pencil", 6.99, 8), 
+(6, "Burt's Bees", "Blush", 12.99, 2),
+(7, "NYX", "Lip Cushion", 6.99, 8),
+(8, "Maybelline", "Skin Tint", 13.99, 12),
+(9, "Real Techniques", "Beauty Sponge", 6.99, 1),
+(10, "Airspun", "Setting Powder", 9.99, 6),
+(11, "Maybelline", "Foundation", 16.99, 3),
+(12, "Physician's Formula", "Bronzer", 11.99, 8),
+(13, "Milani", "Setting Spray", 7.99, 5),
+(14, "E.L.F.", "Putty Blush", 6.99, 11), 
+(15, "L'Oreal", "Brow Gel", 8.99, 1);
+
+--display the database ordered by price. 
+SELECT * FROM makeup 
+ORDER BY price ASC;
+
+--what is the total price of all items?
+SELECT SUM(price) FROM makeup;
+
