@@ -1,4 +1,4 @@
---Create a grocery store database
+--Create a grocery store database.
 
 CREATE TABLE makeup (id INTEGER PRIMARY KEY, brand TEXT, item TEXT, price INTEGER, isle INTEGER); 
 
