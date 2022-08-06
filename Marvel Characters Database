@@ -42,4 +42,29 @@ INSERT INTO marvels VALUES(24, "Venon", 78, "Neutral", "Male", 1.90, 118, "EUA",
 INSERT INTO marvels VALUES(25, "Juggernaut", 76, "Neutral", "Male", 2.87, 862, "EUA", 2, 7, 2, 7, 1, 4);
 INSERT INTO marvels VALUES(26, "Professor X", 58, "Good", "Male", 1.83, 86, "EUA", 5, 2, 2, 2, 5, 3);
 
---
+--What are average, max, and min values in the data?
+SELECT AVG(height_m) FROM marvels;
+SELECT MAX(strength) FROM marvels; 
+SELECT MIN(speed) FROM marvels;
+
+
+--What about those numbers per category in the data?
+SELECT name, AVG(height_m) as tallest_marvels
+FROM marvels 
+GROUP BY height_m 
+HAVING SUM (height_m) > 1.7;
+
+SELECT name, MAX(strength) as strongest_marvels
+FROM marvels 
+GROUP BY strength 
+HAVING SUM (strength) >= 5;
+
+SELECT MIN(speed) as fastest_marvels
+FROM marvels
+GROUP BY speed 
+HAVING SUM (speed) >= 3;
+
+
+--Group data values by popularity. 
+
+
