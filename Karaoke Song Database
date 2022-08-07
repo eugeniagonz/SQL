@@ -27,9 +27,10 @@ INSERT INTO songs (title, artist, mood, duration, released)
 
 --Display the database ordered by songs that are "epic" or released after 1990. 
 
-SELECT title FROM songs
-WHERE mood = 'epic' 
-OR released > 1990; 
+SELECT * 
+FROM songs
+WHERE mood = "epic" 
+OR released > 1990;
 
 --Display the database ordered by songs that are "epic" and released after 1990 and 4 minutes or less. 
 
