@@ -24,5 +24,3 @@ INSERT INTO cleaning_store VALUES
 SELECT * FROM cleaning_store 
 WHERE price > 5.99 AND isle >= 4 
 ORDER BY price ASC;
-
---
