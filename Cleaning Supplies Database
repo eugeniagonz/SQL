@@ -1,0 +1,21 @@
+--Create a database with a niche product. 
+
+CREATE TABLE cleaning_store
+(id INTEGER PRIMARY KEY, item TEXT, brand TEXT, price INTEGER, color TEXT, isle INTEGER);
+
+INSERT INTO cleaning_store VALUES
+(1, "mop", "O'Cedar", 14.99, "red", 5),
+(2, "broom", "Libman", 9.99, "green", 5),
+(3, "all-purpose cleaner", "Method", 6.99,"pink", 4), 
+(4, "bathroom cleaner", "Clorox", 4.99, "blue", 4),
+(5, "glass cleaner", "Windex", 3.99, "blue", 4),
+(6, "disinfectant", "Lysol", 3.99, "yellow", 6),
+(7, "sponge", "Scrub Daddy", 5.99, "pink", 5),
+(8, "dish soap", "Dawn", 6.99, "blue", 7),
+(9, "duster", "Generic Brand", 3.99, "grey", 3),
+(10, "paper towels", "Bounty", 12.99, "orange", 8),
+(11, "detergent", "Tide", 7.99, "orange", 5),
+(12, "spray bottle", "Walamart", 3.99, "clear", 2),
+(13, "floor solution", "Fabuloso", 4.99, "yellow", 6),
+(14, "vacuum", "Dyson", 149.99, "purple", 9),
+(15, "trash bags", "Glad", 5.99, "white", 2);
