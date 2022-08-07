@@ -1,4 +1,4 @@
---Create a database with a niche product. 
+--Create a cleaning store database. 
 
 CREATE TABLE cleaning_store
 (id INTEGER PRIMARY KEY, item TEXT, brand TEXT, price INTEGER, color TEXT, isle INTEGER);
@@ -19,3 +19,10 @@ INSERT INTO cleaning_store VALUES
 (13, "floor solution", "Fabuloso", 4.99, "yellow", 6),
 (14, "vacuum", "Dyson", 149.99, "purple", 9),
 (15, "trash bags", "Glad", 5.99, "white", 2);
+
+--Display the database showing items priced above 5.99 and located in isle 4 or above. 
+SELECT * FROM cleaning_store 
+WHERE price > 5.99 AND isle >= 4 
+ORDER BY price ASC;
+
+--
