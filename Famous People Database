@@ -1,0 +1,54 @@
+--Create table about famous people and what they do. 
+
+CREATE TABLE favorite_artists 
+(id INTEGER PRIMARY KEY, name TEXT, age INTEGER, hometown TEXT, genre TEXT);
+
+INSERT INTO favorite_artists VALUES
+(1, "Drake", 35, "Toronto", "Hip-Hop/R&B"),
+(2, "Chris Brown", 32, "Tappahannock", "R&B"),
+(3, " Bruno Mars", 36, "Honolulu", "R&B/Soul"),
+(4, "Bad Bunny", 28, "Almirante Sur", "Raggaeton"),
+(5, "Tory Lanez", 30, ' Brampton', "Hip/Hop/R&B");
+
+CREATE TABLE hit_songs 
+(id INTEGER PRIMARY KEY, song_id INTEGER, name TEXT, released INTEGER, streams INTEGER);
+
+INSERT INTO hit_songs (song_id, name, released, streams) VALUES
+(1, 'One Dance', 2016, 880000000);
+INSERT INTO hit_songs (song_id, name, released, streams) VALUES
+(1, "God's Plan", 2018, 918870000);
+INSERT INTO hit_songs (song_id, name, released, streams) VALUES
+(2, "No Guidance", 2019, 498593080);
+INSERT INTO hit_songs (song_id, name, released, streams) VALUES
+(2, "Go Crazy", 2020, 326798644);
+INSERT INTO hit_songs (song_id, name, released, streams) VALUES
+(3, "Leave the Door Open", 2021, 812385071);
+INSERT INTO hit_songs (song_id, name, released, streams) VALUES
+(3, "That's What I Like", 2017, 759839973);
+INSERT INTO hit_songs (song_id, name, released, streams) VALUES
+(4, "DAKITI", 2020, 1248504412);
+INSERT INTO hit_songs (song_id, name, released, streams) VALUES
+(4, "Yonaguni", 2021, 940446889);
+INSERT INTO hit_songs (song_id, name, released, streams) VALUES
+(5, "WHATS POPPIN", 2020, 423404697);
+INSERT INTO hit_songs (song_id, name, released, streams) VALUES
+(5, "KIKA", 2018, 129611895);
+
+
+--Display the table with the artists and each of their hit songs. 
+SELECT f.name as artist, h.name as hit_song
+FROM favorite_artists f 
+JOIN hit_songs h 
+ON f.id = h.song_id; 
+
+--Display the table showing artists, genre and total combined streams from highest to lowest. 
+SELECT f.name, f.genre, SUM(h.streams) as total_streams
+FROM favorite_artists f 
+LEFT OUTER JOIN hit_songs h 
+ON f.id = h.song_id
+GROUP BY f.name
+ORDER BY total_streams DESC;
+
+
+
+
