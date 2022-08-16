@@ -48,7 +48,3 @@ LEFT OUTER JOIN hit_songs h
 ON f.id = h.song_id
 GROUP BY f.name
 ORDER BY total_streams DESC;
-
-
-
-
