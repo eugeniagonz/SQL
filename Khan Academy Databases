@@ -41,5 +41,37 @@ IN ("Taylor Swift", "Celine Dion", "Rihanna", "Gloria Stefan");
 
 
 
+--Display the database ordered by authors who have written more than 1 million words.  
+SELECT author, SUM(words) as total_words
+FROM books 
+GROUP BY author
+HAVING total_words > 1000000;
+
+--Display the database ordered by authors that write more than an average of 150,000 words per book. 
+SELECT author, AVG(words) as avg_words
+FROM books 
+GROUP BY author
+HAVING avg_words >=150000;
+
+
+
+
+--Display the database ordered by songs that are "epic" or released after 1990. 
+
+SELECT title
+FROM songs
+WHERE mood = "epic" 
+OR released > 1990;
+
+--Display the database ordered by songs that are "epic" and released after 1990 and 4 minutes or less. 
+
+SELECT title 
+FROM songs
+WHERE mood = "epic"
+AND released > 1990 
+AND duration < 240;
+
+
+
 
 
