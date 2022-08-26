@@ -16,7 +16,8 @@ INNER JOIN BIT_DB0.FebSales Feb
 ON cust.order_id = Feb.orderID;
 
 4. Which product was the cheapest one sold in January, and what was the price? 
-SELECT distinct product, price FROM BIT_DB.JanSales 
+SELECT distinct product, price 
+FROM BIT_DB.JanSales 
 ORDER BY price ASC LIMIT 1; 
 
 5. What is the total revenue for each product sold in January? (Revenue can be calculated using the number of products sold and the price of the products).
